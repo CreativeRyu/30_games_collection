@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxofgvfp37i74"
+path="res://.godot/imported/Whoosh Short Low 02.wav-d1e329abaf60027e2e2091ba95608528.sample"
+
+[deps]
+
+source_file="res://Games/juicyjutsu/audio/sfx/fruit_launch/Whoosh Short Low 02.wav"
+dest_files=["res://.godot/imported/Whoosh Short Low 02.wav-d1e329abaf60027e2e2091ba95608528.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

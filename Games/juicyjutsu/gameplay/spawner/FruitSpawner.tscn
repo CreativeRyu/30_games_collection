@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://bfn1pjun8c3eb"]
+
+[ext_resource type="Script" uid="uid://b1o86apw3xrwv" path="res://Games/juicyjutsu/gameplay/spawner/fruit_spawner.gd" id="1_idq8b"]
+[ext_resource type="PackedScene" uid="uid://smrat08ogg8k" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Apple.tscn" id="2_r2dvv"]
+[ext_resource type="PackedScene" uid="uid://dhp0igclbvshu" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Banana.tscn" id="3_sy2nu"]
+[ext_resource type="PackedScene" uid="uid://dr5dayop4rtqh" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Birne.tscn" id="4_4uqtf"]
+[ext_resource type="PackedScene" uid="uid://b7liujjb3ea27" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Cherry.tscn" id="5_va418"]
+[ext_resource type="PackedScene" uid="uid://dyoskoy8wq2mb" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Grapes.tscn" id="6_p73wp"]
+[ext_resource type="PackedScene" uid="uid://bg8ahc1ffums3" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Kiwi.tscn" id="7_q2383"]
+[ext_resource type="PackedScene" uid="uid://b15pgr6ls0dhu" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Peach.tscn" id="8_jc034"]
+[ext_resource type="PackedScene" uid="uid://diy8v1p6up0pm" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Strawberry.tscn" id="9_1xmt4"]
+[ext_resource type="PackedScene" uid="uid://yweplk4qmd4p" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Bomb.tscn" id="10_8t8ue"]
+[ext_resource type="PackedScene" uid="uid://d4cv6a1ctepua" path="res://Games/juicyjutsu/gameplay/fruit_scenes/Mandarine.tscn" id="11_va418"]
+
+[node name="FruitSpawner" type="Node2D"]
+script = ExtResource("1_idq8b")
+spawn_table = [{
+"scene": ExtResource("2_r2dvv"),
+"weight": 4
+}, {
+"scene": ExtResource("3_sy2nu"),
+"weight": 4
+}, {
+"scene": ExtResource("4_4uqtf"),
+"weight": 3
+}, {
+"scene": ExtResource("5_va418"),
+"weight": 1
+}, {
+"scene": ExtResource("6_p73wp"),
+"weight": 2
+}, {
+"scene": ExtResource("7_q2383"),
+"weight": 5
+}, {
+"scene": ExtResource("8_jc034"),
+"weight": 3
+}, {
+"scene": ExtResource("9_1xmt4"),
+"weight": 4
+}, {
+"scene": ExtResource("10_8t8ue"),
+"weight": 1
+}, {
+"scene": ExtResource("11_va418"),
+"weight": 2
+}]
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="SpawnLeft" type="Node2D" parent="SpawnPoints" groups=["spawn_left"]]
+position = Vector2(-41, 233)
+
+[node name="SpawnRight" type="Node2D" parent="SpawnPoints" groups=["spawn_right"]]
+position = Vector2(687, 244)
+
+[node name="SpawnCenter" type="Node2D" parent="SpawnPoints" groups=["spawn_bottom"]]
+position = Vector2(314, 404)
+
+[node name="SpawnCenterRight" type="Node2D" parent="SpawnPoints" groups=["spawn_bottom"]]
+position = Vector2(535, 429)
+
+[node name="SpawnCenterLeft" type="Node2D" parent="SpawnPoints" groups=["spawn_bottom"]]
+position = Vector2(83, 429)
+
+[node name="SpawnTimer" type="Timer" parent="."]

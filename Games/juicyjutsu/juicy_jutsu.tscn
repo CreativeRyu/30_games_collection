@@ -1,0 +1,40 @@
+[gd_scene load_steps=12 format=3 uid="uid://dfrg7ne8lr2vs"]
+
+[ext_resource type="Script" uid="uid://yin5rkl5qjw1" path="res://Games/juicyjutsu/juicy_jutsu.gd" id="1_8majp"]
+[ext_resource type="AudioStream" uid="uid://cvyhtfdwg32lw" path="res://Games/juicyjutsu/audio/music/startmenuBGM.mp3" id="2_2ik8m"]
+[ext_resource type="PackedScene" uid="uid://k1a74w55djot" path="res://Games/juicyjutsu/gameplay/GamePlay.tscn" id="2_f8gfj"]
+[ext_resource type="AudioStream" uid="uid://coofxbaj6cbbn" path="res://Games/juicyjutsu/audio/music/gameplayBGM.mp3" id="3_3sl3u"]
+[ext_resource type="PackedScene" uid="uid://b6y6aamj134po" path="res://Games/juicyjutsu/ui/StartMenu.tscn" id="3_8majp"]
+[ext_resource type="PackedScene" uid="uid://wtsj0hgr7akr" path="res://Games/juicyjutsu/ui/PauseMenu.tscn" id="4_0vxlw"]
+[ext_resource type="PackedScene" uid="uid://bmpa6dfi30xtl" path="res://Games/juicyjutsu/ui/HUD.tscn" id="5_n3ixl"]
+[ext_resource type="PackedScene" uid="uid://dvx4dqy70uo2c" path="res://Games/juicyjutsu/ui/GameOverMenu.tscn" id="6_n3ixl"]
+[ext_resource type="PackedScene" uid="uid://b6w8s7557821y" path="res://Games/juicyjutsu/systems/AudioManager.tscn" id="7_vxxs0"]
+[ext_resource type="PackedScene" uid="uid://bywuqxwu8qqup" path="res://Games/juicyjutsu/systems/Highscore_Manager.tscn" id="10_e0c6h"]
+[ext_resource type="PackedScene" uid="uid://edm32w82j3y2" path="res://Games/juicyjutsu/systems/CameraShake.tscn" id="11_f8if1"]
+
+[node name="GameRoot" type="Node2D"]
+script = ExtResource("1_8majp")
+start_menu_BGM = ExtResource("2_2ik8m")
+gameplay_BGM = ExtResource("3_3sl3u")
+
+[node name="GamePlay" parent="." instance=ExtResource("2_f8gfj")]
+visible = false
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="StartMenu" parent="UI" instance=ExtResource("3_8majp")]
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("4_0vxlw")]
+visible = false
+
+[node name="Hud" parent="UI" instance=ExtResource("5_n3ixl")]
+visible = false
+
+[node name="GameOverMenu" parent="UI" instance=ExtResource("6_n3ixl")]
+visible = false
+
+[node name="AudioManager" parent="." instance=ExtResource("7_vxxs0")]
+
+[node name="HighscoreManager" parent="." instance=ExtResource("10_e0c6h")]
+
+[node name="CameraShake" parent="." instance=ExtResource("11_f8if1")]

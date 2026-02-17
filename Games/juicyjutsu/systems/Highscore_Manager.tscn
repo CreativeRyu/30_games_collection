@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bywuqxwu8qqup"]
+
+[ext_resource type="Script" uid="uid://dxaspsgfd3ruf" path="res://Games/juicyjutsu/systems/highscore_manager.gd" id="1_83rmk"]
+
+[node name="HighscoreManager" type="Node"]
+script = ExtResource("1_83rmk")

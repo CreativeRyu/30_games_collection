@@ -1,0 +1,206 @@
+[gd_scene load_steps=12 format=3 uid="uid://c4ljvox8mydep"]
+
+[ext_resource type="Script" uid="uid://bontmw3xvcq4a" path="res://Launcher/Main_Menu/main_menu.gd" id="1_ovrgc"]
+[ext_resource type="PackedScene" uid="uid://c1vwmfj5sqqng" path="res://Launcher/Launcher_UI/game_card.tscn" id="1_xqga4"]
+[ext_resource type="FontFile" uid="uid://dvs84u8k4y3tf" path="res://Assets/Fonts/upheavtt.ttf" id="2_imvie"]
+[ext_resource type="Texture2D" uid="uid://dwxq618ld8bta" path="res://Assets/Graphics/Creative Djinn Logo Dark.png" id="4_6bivr"]
+[ext_resource type="PackedScene" uid="uid://dfrg7ne8lr2vs" path="res://Games/juicyjutsu/juicy_jutsu.tscn" id="4_imvie"]
+[ext_resource type="Script" uid="uid://ckotfxwy5rprc" path="res://Launcher/Main_Menu/quit_button.gd" id="5_8r73w"]
+[ext_resource type="Texture2D" uid="uid://bo2ih8iqrti5j" path="res://Assets/Graphics/button_icons/power.png" id="5_ng0o5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_imvie"]
+bg_color = Color(0.248983, 0.279827, 0.295248, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0196078, 0.666667, 0.529412, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.235294, 0.388235, 0.356863, 1)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng0o5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.498039, 1, 0.831373, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r73w"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.498039, 1, 0.831373, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hnlc"]
+bg_color = Color(0.254902, 0.254902, 0.254902, 0.662745)
+shadow_color = Color(0.47451, 0.109804, 0.109804, 0.6)
+shadow_size = 5
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ovrgc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 166.0
+offset_top = 11.0
+offset_right = 467.0
+offset_bottom = 79.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.991164, 0.991164, 0.991164, 1)
+theme_override_colors/font_outline_color = Color(0.0203997, 0.666101, 0.529135, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/paragraph_spacing = 0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_imvie")
+theme_override_font_sizes/font_size = 32
+text = "Creative Djinn's
+Games Collection"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_left = 64.0
+offset_top = 112.0
+offset_right = 576.0
+offset_bottom = 281.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_imvie")
+
+[node name="SystemPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_left = 232.0
+offset_top = 296.0
+offset_right = 406.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_imvie")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+offset_left = 72.0
+offset_top = 115.0
+offset_right = 568.0
+offset_bottom = 280.0
+mouse_filter = 0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="GameCard" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_right = NodePath("../GameCard2")
+game_name = "Juicy Jutsu"
+game_number = "1"
+game_scene = ExtResource("4_imvie")
+
+[node name="GameCard2" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../GameCard")
+focus_neighbor_right = NodePath("../GameCard3")
+
+[node name="GameCard3" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../GameCard2")
+focus_neighbor_right = NodePath("../GameCard4")
+
+[node name="GameCard4" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../GameCard3")
+focus_neighbor_right = NodePath("../GameCard5")
+
+[node name="GameCard5" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../GameCard4")
+focus_neighbor_right = NodePath("../GameCard6")
+
+[node name="GameCard6" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../GameCard5")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+offset_left = 232.0
+offset_top = 296.0
+offset_right = 408.0
+offset_bottom = 344.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="QuitButton" type="Button" parent="CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/icon_hover_color = Color(0.882353, 0.882353, 0.882353, 0.529412)
+theme_override_colors/icon_pressed_color = Color(0.309804, 0.309804, 0.309804, 0.431373)
+theme_override_styles/focus = SubResource("StyleBoxFlat_ng0o5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8r73w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1hnlc")
+flat = true
+icon_alignment = 1
+script = ExtResource("5_8r73w")
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer/QuitButton"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -13.0
+offset_right = 13.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ng0o5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="CreativeDjinnLogoDark" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(44, 39)
+scale = Vector2(0.0521582, 0.0485013)
+texture = ExtResource("4_6bivr")
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

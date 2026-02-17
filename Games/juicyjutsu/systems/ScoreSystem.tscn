@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsgovljj4ytvx"]
+
+[ext_resource type="Script" uid="uid://cmf820mspfm2n" path="res://Games/juicyjutsu/systems/score_system.gd" id="1_hfncb"]
+
+[node name="ScoreSystem" type="Node" groups=["score_system"]]
+script = ExtResource("1_hfncb")

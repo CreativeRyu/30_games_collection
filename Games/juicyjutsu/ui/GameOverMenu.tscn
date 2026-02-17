@@ -1,0 +1,190 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvx4dqy70uo2c"]
+
+[ext_resource type="Script" uid="uid://c7f82ejkhxa8t" path="res://Games/juicyjutsu/ui/game_over_overlay.gd" id="1_a5w5s"]
+[ext_resource type="Texture2D" uid="uid://cuo1meu0l1qd4" path="res://Games/juicyjutsu/assets/labels/GameOver.png" id="2_f8l6e"]
+[ext_resource type="FontFile" uid="uid://cgriejvcbmcee" path="res://Assets/Fonts/elv-pixels-06.ttf" id="3_1f4ee"]
+
+[sub_resource type="Animation" id="Animation_a5w5s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer/MarginContainer/Panel/TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_f8l6e"]
+resource_name = "game_over"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.05, 0.333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0.909804, 1), Color(1, 1, 0.878431, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer/MarginContainer/Panel/TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.266667, 0.8, 2.93333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 0.941176, 1, 1), Color(1, 0.964706, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_v5t0k"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.34),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_83aqh"]
+_data = {
+&"RESET": SubResource("Animation_a5w5s"),
+&"game_over": SubResource("Animation_f8l6e"),
+&"idle": SubResource("Animation_v5t0k")
+}
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_a5w5s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0.735)
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_83aqh")
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -145.0
+offset_top = -171.0
+offset_right = -145.0
+offset_bottom = -171.0
+scale = Vector2(0.25, 0.25)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_f8l6e")
+expand_mode = 1
+stretch_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -8.0
+offset_right = 59.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Score_Label" type="Label" parent="CenterContainer/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_1f4ee")
+text = "Score:"
+
+[node name="Highscore_Label" type="Label" parent="CenterContainer/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_1f4ee")
+text = "Highscore:"
+
+[node name="Restart_Button" type="Button" parent="CenterContainer/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Restart Game"
+
+[node name="Start_Menu_Button" type="Button" parent="CenterContainer/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Start Menu"
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/Panel/VBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/Panel/VBoxContainer/Start_Menu_Button" to="." method="_on_start_menu_button_pressed"]

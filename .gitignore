@@ -1,0 +1,45 @@
+# Godot 4+ specific ignores
+# ----------------------------
+# Godot 4.x
+# ----------------------------
+.godot/
+.import/
+.export/
+android/
+web/
+windows/
+linux/
+macos/
+
+# ----------------------------
+# Builds / Exports
+# ----------------------------
+build/
+dist/
+exports/
+executables/
+
+# ----------------------------
+# Logs & temporär
+# ----------------------------
+*.log
+*.tmp
+*.bak
+
+# ----------------------------
+# OS / Editor
+# ----------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ----------------------------
+# Audio Assets 
+# ----------------------------
+scenes/games/juicyjutsu/audio/
+
+# ----------------------------
+# Fonts
+# ----------------------------
+Assets/Fonts

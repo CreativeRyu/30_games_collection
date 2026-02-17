@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://coxpgahrydu7i"]
+
+[ext_resource type="Script" uid="uid://c4u2n824vhj2i" path="res://Games/juicyjutsu/gameplay/fruit_scenes/slice_piece.gd" id="1_pds61"]
+
+[node name="SlicePiece" type="Node2D"]
+script = ExtResource("1_pds61")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

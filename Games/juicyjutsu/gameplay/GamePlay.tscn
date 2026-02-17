@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://k1a74w55djot"]
+
+[ext_resource type="PackedScene" uid="uid://bfn1pjun8c3eb" path="res://Games/juicyjutsu/gameplay/spawner/FruitSpawner.tscn" id="1_7tban"]
+[ext_resource type="PackedScene" uid="uid://bsgovljj4ytvx" path="res://Games/juicyjutsu/systems/ScoreSystem.tscn" id="2_munti"]
+[ext_resource type="Texture2D" uid="uid://cxfd4qqobrtdn" path="res://Games/juicyjutsu/assets/backgrounds/JuicyBG.png" id="3_vwmit"]
+[ext_resource type="PackedScene" uid="uid://mpg2do8hro7o" path="res://Games/juicyjutsu/gameplay/blade/Blade.tscn" id="4_p5kof"]
+
+[node name="GamePlay" type="Node2D"]
+
+[node name="FruitSpawner" parent="." instance=ExtResource("1_7tban")]
+
+[node name="ScoreSystem" parent="." instance=ExtResource("2_munti")]
+
+[node name="JuicyBg" type="Sprite2D" parent="."]
+position = Vector2(320.5, 191.5)
+scale = Vector2(0.417318, 0.399414)
+texture = ExtResource("3_vwmit")
+
+[node name="Blade" parent="." instance=ExtResource("4_p5kof")]

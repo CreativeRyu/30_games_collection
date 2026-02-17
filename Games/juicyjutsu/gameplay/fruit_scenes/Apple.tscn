@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://smrat08ogg8k"]
+
+[ext_resource type="Texture2D" uid="uid://8vsy0csgnslf" path="res://Games/juicyjutsu/assets/Fruits/Fruits_Separated/Apple.png" id="1_0rumy"]
+[ext_resource type="Script" uid="uid://be1875kkmyfu4" path="res://Games/juicyjutsu/gameplay/fruit_scenes/fruit_base.gd" id="1_fin27"]
+[ext_resource type="PackedScene" uid="uid://coxpgahrydu7i" path="res://Games/juicyjutsu/gameplay/fruit_scenes/SlicePiece.tscn" id="2_4y0ax"]
+[ext_resource type="PackedScene" uid="uid://tjs751g3f7qe" path="res://Games/juicyjutsu/gameplay/fruit_scenes/fruit_splatter/FruitSplatter.tscn" id="3_ih3hf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pdnmn"]
+radius = 18.0278
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fin27"]
+radius = 22.0227
+
+[node name="Apple" type="CharacterBody2D"]
+script = ExtResource("1_fin27")
+slice_piece_scene = ExtResource("2_4y0ax")
+fruit_splatter_szene = ExtResource("3_ih3hf")
+juice_color = Color(0.619608, 0.933333, 0.584314, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_0rumy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_pdnmn")
+
+[node name="SliceDetector" type="Area2D" parent="." groups=["fruit"]]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SliceDetector"]
+shape = SubResource("CircleShape2D_fin27")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

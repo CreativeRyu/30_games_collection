@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://tjs751g3f7qe"]
+
+[ext_resource type="Script" uid="uid://bkkkq5x1620qw" path="res://Games/juicyjutsu/gameplay/fruit_scenes/fruit_splatter/fruit_splatter.gd" id="1_o5uu6"]
+[ext_resource type="Texture2D" uid="uid://bv24qyg5x6eom" path="res://Games/juicyjutsu/assets/Fruits/juice/juice_splash1.png" id="2_3tm2w"]
+[ext_resource type="Texture2D" uid="uid://nmh3176w3ng1" path="res://Games/juicyjutsu/assets/Fruits/juice/juice_splash2.png" id="3_s5rl4"]
+[ext_resource type="Texture2D" uid="uid://m7ulryh2esam" path="res://Games/juicyjutsu/assets/Fruits/juice/juice_splash3.png" id="4_kae34"]
+
+[sub_resource type="Curve" id="Curve_3tm2w"]
+_data = [Vector2(0.0218069, 0.991895), 0.0, 0.0, 0, 0, Vector2(0.738318, 0.805486), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_rkund"]
+curve = SubResource("Curve_3tm2w")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3tm2w"]
+lifetime_randomness = 0.3
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 65.0
+initial_velocity_min = 50.0
+initial_velocity_max = 150.0
+angular_velocity_min = -6.00002
+angular_velocity_max = 5.99998
+gravity = Vector3(0, 50, 0)
+linear_accel_min = -180.0
+linear_accel_max = -160.0
+scale_min = 0.1
+scale_max = 0.2
+alpha_curve = SubResource("CurveTexture_rkund")
+
+[node name="FruitSplatter" type="Node2D"]
+script = ExtResource("1_o5uu6")
+juice_textures = Array[Texture2D]([ExtResource("2_3tm2w"), ExtResource("3_s5rl4"), ExtResource("4_kae34")])
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 1
+lifetime = 0.34
+one_shot = true
+explosiveness = 0.1
+randomness = 0.3
+trail_lifetime = 0.46
+process_material = SubResource("ParticleProcessMaterial_3tm2w")

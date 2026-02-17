@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cv4ena76pio1b"
+path="res://.godot/imported/Blood Splatter 01.wav-53c42f4c6cde25a2feeddf9707ce4400.sample"
+
+[deps]
+
+source_file="res://Games/juicyjutsu/audio/sfx/Blood Splatter 01.wav"
+dest_files=["res://.godot/imported/Blood Splatter 01.wav-53c42f4c6cde25a2feeddf9707ce4400.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

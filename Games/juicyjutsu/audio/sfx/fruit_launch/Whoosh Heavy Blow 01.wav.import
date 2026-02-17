@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cnxcr7dwsve7d"
+path="res://.godot/imported/Whoosh Heavy Blow 01.wav-478c5fe88f061d994ca711e3c31876b6.sample"
+
+[deps]
+
+source_file="res://Games/juicyjutsu/audio/sfx/fruit_launch/Whoosh Heavy Blow 01.wav"
+dest_files=["res://.godot/imported/Whoosh Heavy Blow 01.wav-478c5fe88f061d994ca711e3c31876b6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

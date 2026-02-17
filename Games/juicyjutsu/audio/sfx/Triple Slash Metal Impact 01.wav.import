@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8p3rrupscf4i"
+path="res://.godot/imported/Triple Slash Metal Impact 01.wav-62b8e6cc6ed88e8fb09a6a364dbfd693.sample"
+
+[deps]
+
+source_file="res://Games/juicyjutsu/audio/sfx/Triple Slash Metal Impact 01.wav"
+dest_files=["res://.godot/imported/Triple Slash Metal Impact 01.wav-62b8e6cc6ed88e8fb09a6a364dbfd693.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
