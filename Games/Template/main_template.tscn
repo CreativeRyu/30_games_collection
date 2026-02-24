@@ -19,18 +19,25 @@ visible = false
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="StartMenu" parent="UI" instance=ExtResource("3_fdxlp")]
+script = null
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("4_shrao")]
 visible = false
+script = null
 
 [node name="Hud" parent="UI" instance=ExtResource("5_dyn1e")]
 visible = false
+script = null
 
 [node name="GameOverMenu" parent="UI" instance=ExtResource("6_bvhu0")]
 visible = false
+script = null
 
 [node name="AudioManager" parent="." instance=ExtResource("7_y5pl4")]
+script = null
 
 [node name="HighscoreManager" parent="." instance=ExtResource("8_0r3yx")]
+script = null
 
 [node name="CameraShake" parent="." instance=ExtResource("9_656ne")]
+script = null

@@ -9,6 +9,7 @@ var is_button_locked := false
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	add_to_group("menus")
 
 func on_opened():
 	is_button_locked = false

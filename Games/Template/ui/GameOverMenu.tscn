@@ -33,7 +33,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CenterContainer/MarginContainer/Panel/TextureRect:modulate")
+tracks/2/path = NodePath("GameOverMenuRoot/CenterContainer/MarginContainer/Panel/TextureRect:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -74,7 +74,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CenterContainer/MarginContainer/Panel/TextureRect:modulate")
+tracks/2/path = NodePath("GameOverMenuRoot/CenterContainer/MarginContainer/Panel/TextureRect:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -107,7 +107,6 @@ _data = {
 }
 
 [node name="GameOverMenu" type="CanvasLayer"]
-script = ExtResource("1_uknhb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -121,20 +120,30 @@ libraries = {
 &"": SubResource("AnimationLibrary_83aqh")
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="GameOverMenuRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uknhb")
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOverMenuRoot"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="GameOverMenuRoot/CenterContainer"]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="CenterContainer/MarginContainer"]
+[node name="Panel" type="Panel" parent="GameOverMenuRoot/CenterContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/Panel"]
+[node name="TextureRect" type="TextureRect" parent="GameOverMenuRoot/CenterContainer/MarginContainer/Panel"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -145.0
@@ -148,7 +157,7 @@ texture = ExtResource("2_rpext")
 expand_mode = 1
 stretch_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverMenuRoot/CenterContainer/MarginContainer/Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -164,27 +173,27 @@ grow_vertical = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Score_Label" type="Label" parent="CenterContainer/MarginContainer/Panel/VBoxContainer"]
+[node name="Score_Label" type="Label" parent="GameOverMenuRoot/CenterContainer/MarginContainer/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_7ccxj")
 text = "Score:"
 
-[node name="Highscore_Label" type="Label" parent="CenterContainer/MarginContainer/Panel/VBoxContainer"]
+[node name="Highscore_Label" type="Label" parent="GameOverMenuRoot/CenterContainer/MarginContainer/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_7ccxj")
 text = "Highscore:"
 
-[node name="Restart_Button" type="Button" parent="CenterContainer/MarginContainer/Panel/VBoxContainer"]
+[node name="Restart_Button" type="Button" parent="GameOverMenuRoot/CenterContainer/MarginContainer/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Restart Game"
 
-[node name="Start_Menu_Button" type="Button" parent="CenterContainer/MarginContainer/Panel/VBoxContainer"]
+[node name="Start_Menu_Button" type="Button" parent="GameOverMenuRoot/CenterContainer/MarginContainer/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Start Menu"
 
-[connection signal="pressed" from="CenterContainer/MarginContainer/Panel/VBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="CenterContainer/MarginContainer/Panel/VBoxContainer/Start_Menu_Button" to="." method="_on_start_menu_button_pressed"]
+[connection signal="pressed" from="GameOverMenuRoot/CenterContainer/MarginContainer/Panel/VBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="GameOverMenuRoot/CenterContainer/MarginContainer/Panel/VBoxContainer/Start_Menu_Button" to="." method="_on_start_menu_button_pressed"]
