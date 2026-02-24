@@ -28,7 +28,6 @@ func start_round():
 	is_round_running = true
 	round_started.emit()
 	set_process(true)
-	
 
 func pause_round():
 	is_round_running = false

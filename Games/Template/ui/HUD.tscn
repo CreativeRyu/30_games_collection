@@ -1,7 +1,101 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuqflymmoq2uw"]
+[gd_scene load_steps=8 format=3 uid="uid://cuqflymmoq2uw"]
 
 [ext_resource type="Script" uid="uid://2r23bsgwe8f4" path="res://Games/Template/ui/hud.gd" id="1_l67am"]
 [ext_resource type="FontFile" uid="uid://cgriejvcbmcee" path="res://Assets/Fonts/elv-pixels-06.ttf" id="2_uvi7w"]
+
+[sub_resource type="Animation" id="Animation_muv88"]
+resource_name = "score_pulse"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Score_Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Score_Label:theme_override_constants/shadow_outline_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0535198, 0.0991691, 0.100743, 0.152689, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 10, 15, 20, 10, 8]
+}
+
+[sub_resource type="Animation" id="Animation_051ce"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Score_Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Score_Label:theme_override_constants/shadow_outline_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Time_Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_051ce"]
+_data = {
+&"RESET": SubResource("Animation_051ce"),
+&"score_pulse": SubResource("Animation_muv88")
+}
+
+[sub_resource type="Animation" id="Animation_mweg5"]
+resource_name = "time_warning"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Time_Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.247136, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0.0352941, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nq2pb"]
+_data = {
+&"time_warning": SubResource("Animation_mweg5")
+}
 
 [node name="Hud" type="Control"]
 layout_mode = 3
@@ -42,3 +136,13 @@ theme_override_constants/shadow_outline_size = 8
 theme_override_fonts/font = ExtResource("2_uvi7w")
 theme_override_font_sizes/font_size = 27
 text = "100"
+
+[node name="ScoreAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_051ce")
+}
+
+[node name="TimerAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nq2pb")
+}
