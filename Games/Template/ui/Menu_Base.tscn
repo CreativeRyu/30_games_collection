@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqlfbl11ygqb5"]
+
+[ext_resource type="Script" uid="uid://c5o0gwj1vm0qy" path="res://Games/Template/ui/menu_base.gd" id="1_xt4xi"]
+
+[node name="MenuBase" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xt4xi")
