@@ -38,6 +38,7 @@ func _ready() -> void:
 	# GameOver Menu Connects
 	game_over_menu.restart_pressed.connect(restart_game)
 	game_over_menu.exit_to_menu_pressed.connect(back_to_start_menu)
+	game_over_menu.pressed_action.connect(_on_ui_pressed)
 	
 func set_state(state: GameState):
 	if current_state == state:

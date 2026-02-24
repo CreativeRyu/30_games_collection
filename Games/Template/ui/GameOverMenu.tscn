@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://vsp67ur58n2v"]
 
-[ext_resource type="Script" uid="uid://c7f82ejkhxa8t" path="res://Games/juicyjutsu/ui/game_over_overlay.gd" id="1_uknhb"]
+[ext_resource type="Script" uid="uid://b2fbkvnqgl4nv" path="res://Games/Template/ui/game_over_menu.gd" id="1_uknhb"]
 [ext_resource type="Texture2D" uid="uid://cuo1meu0l1qd4" path="res://Games/juicyjutsu/assets/labels/GameOver.png" id="2_rpext"]
 [ext_resource type="FontFile" uid="uid://cgriejvcbmcee" path="res://Assets/Fonts/elv-pixels-06.ttf" id="3_7ccxj"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cuqflymmoq2uw"]
 
-[ext_resource type="Script" uid="uid://ddfpqia0t7d84" path="res://Games/juicyjutsu/ui/hud.gd" id="1_l67am"]
+[ext_resource type="Script" uid="uid://2r23bsgwe8f4" path="res://Games/Template/ui/hud.gd" id="1_l67am"]
 [ext_resource type="FontFile" uid="uid://cgriejvcbmcee" path="res://Assets/Fonts/elv-pixels-06.ttf" id="2_uvi7w"]
 
 [node name="Hud" type="Control"]
