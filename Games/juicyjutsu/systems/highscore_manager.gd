@@ -1,6 +1,6 @@
 extends Node
 
-const SAVE_PATH = "user//juicyjutsu_highscore.cfg"
+const SAVE_PATH = "user://juicyjutsu_highscore.cfg"
 const SECTION = "scores"
 const KEY = "highscore"
 

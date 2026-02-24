@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn4dbt43fhgps"]
+
+[ext_resource type="Script" uid="uid://bkr4mxims347c" path="res://Games/Template/systems/score_system.gd" id="1_hmmj0"]
+
+[node name="ScoreSystem" type="Node" groups=["score_system"]]
+script = ExtResource("1_hmmj0")

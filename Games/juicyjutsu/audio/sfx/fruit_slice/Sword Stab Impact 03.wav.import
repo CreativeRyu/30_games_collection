@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qghia3eyd4wv"
+path="res://.godot/imported/Sword Stab Impact 03.wav-6813e87ef111a0375fbf652cc31d43a9.sample"
+
+[deps]
+
+source_file="res://Games/juicyjutsu/audio/sfx/fruit_slice/Sword Stab Impact 03.wav"
+dest_files=["res://.godot/imported/Sword Stab Impact 03.wav-6813e87ef111a0375fbf652cc31d43a9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,18 +1,19 @@
-[gd_scene load_steps=21 format=3 uid="uid://b6w8s7557821y"]
+[gd_scene load_steps=22 format=3 uid="uid://b6w8s7557821y"]
 
 [ext_resource type="Script" uid="uid://d3u1pf22euybw" path="res://Games/juicyjutsu/systems/audio_manager.gd" id="1_dnhvb"]
-[ext_resource type="AudioStream" uid="uid://w8fik3jke2r8" path="res://Games/juicyjutsu/audio/sfx/Gore Splat Stab Poke 03.wav" id="2_8neq3"]
-[ext_resource type="AudioStream" uid="uid://b7l04skmn0gmo" path="res://Games/juicyjutsu/audio/sfx/Sword Stab Impact 01.wav" id="3_etwrd"]
-[ext_resource type="AudioStream" uid="uid://qghia3eyd4wv" path="res://Games/juicyjutsu/audio/sfx/Sword Stab Impact 03.wav" id="4_suk7i"]
+[ext_resource type="AudioStream" uid="uid://cdux6ny272u6k" path="res://Games/juicyjutsu/audio/sfx/fruit_slice/fruit_splashed.mp3" id="3_fl2pk"]
+[ext_resource type="AudioStream" uid="uid://w8fik3jke2r8" path="res://Games/juicyjutsu/audio/sfx/fruit_slice/Gore Splat Stab Poke 03.wav" id="4_s7v7t"]
 [ext_resource type="AudioStream" uid="uid://b6hn2dhtwirr0" path="res://Games/juicyjutsu/audio/sfx/Small Blade Slice 05.wav" id="5_4gpxn"]
-[ext_resource type="AudioStream" uid="uid://cdux6ny272u6k" path="res://Games/juicyjutsu/audio/sfx/fruit_splashed.mp3" id="5_tsgbp"]
-[ext_resource type="AudioStream" uid="uid://6ersrru34bfj" path="res://Games/juicyjutsu/audio/sfx/Blade Slash Schwing Short 04.wav" id="6_eo6qt"]
+[ext_resource type="AudioStream" uid="uid://b7l04skmn0gmo" path="res://Games/juicyjutsu/audio/sfx/fruit_slice/Sword Stab Impact 01.wav" id="5_umryg"]
+[ext_resource type="AudioStream" uid="uid://qghia3eyd4wv" path="res://Games/juicyjutsu/audio/sfx/fruit_slice/Sword Stab Impact 03.wav" id="6_2inyl"]
 [ext_resource type="AudioStream" uid="uid://crn5fjjajssnt" path="res://Games/juicyjutsu/audio/sfx/Sword Slash Metallic Light 01.wav" id="7_dhlec"]
+[ext_resource type="AudioStream" uid="uid://cgiug5iw0sxgp" path="res://Games/juicyjutsu/audio/sfx/MP3_Dash.mp3" id="7_k3auk"]
 [ext_resource type="AudioStream" uid="uid://bmjjq0kistumv" path="res://Games/juicyjutsu/audio/sfx/Small Blade Slice 06.wav" id="8_vlsmr"]
 [ext_resource type="AudioStream" uid="uid://fma53lwbvv5c" path="res://Games/juicyjutsu/audio/sfx/Blade Slash Schwing Short 03.wav" id="9_4lnmq"]
 [ext_resource type="AudioStream" uid="uid://dj4pmcyejkcv" path="res://Games/juicyjutsu/audio/sfx/Sword Slash Metallic Med Short 07.wav" id="10_bjxs0"]
 [ext_resource type="AudioStream" uid="uid://b8wcwqorwpjg6" path="res://Games/juicyjutsu/audio/sfx/fruit_launch/Blade Impale Retro 03.wav" id="12_22dlq"]
 [ext_resource type="AudioStream" uid="uid://cnxcr7dwsve7d" path="res://Games/juicyjutsu/audio/sfx/fruit_launch/Whoosh Heavy Blow 01.wav" id="13_4qwqf"]
+[ext_resource type="AudioStream" uid="uid://c8yec3c6jblcj" path="res://Games/juicyjutsu/audio/sfx/Whoosh Motion Snappy 03.wav" id="13_pqb3a"]
 [ext_resource type="AudioStream" uid="uid://b2o8lgcdnw2gl" path="res://Games/juicyjutsu/audio/sfx/fruit_launch/Whoosh Heavy Blow 02.wav" id="14_d12up"]
 [ext_resource type="AudioStream" uid="uid://c0khs1j6q62gc" path="res://Games/juicyjutsu/audio/sfx/fruit_launch/Whoosh Motion Snappy 02.wav" id="15_fjb5m"]
 [ext_resource type="AudioStream" uid="uid://cxofgvfp37i74" path="res://Games/juicyjutsu/audio/sfx/fruit_launch/Whoosh Short Low 02.wav" id="16_4jrlx"]
@@ -23,10 +24,10 @@
 
 [node name="AudioManager" type="Node" groups=["audio_manager"]]
 script = ExtResource("1_dnhvb")
-fruit_slice_sounds = Array[AudioStream]([ExtResource("2_8neq3"), ExtResource("3_etwrd"), ExtResource("4_suk7i"), ExtResource("5_tsgbp")])
-blade_sounds_horizontal = Array[AudioStream]([ExtResource("5_4gpxn"), ExtResource("7_dhlec")])
-blade_sounds_vertical = Array[AudioStream]([ExtResource("8_vlsmr"), ExtResource("10_bjxs0")])
-blade_sounds_diagonal = Array[AudioStream]([ExtResource("9_4lnmq"), ExtResource("6_eo6qt")])
+fruit_slice_sounds = Array[AudioStream]([ExtResource("3_fl2pk"), ExtResource("4_s7v7t"), ExtResource("5_umryg"), ExtResource("6_2inyl")])
+blade_sounds_horizontal = Array[AudioStream]([ExtResource("7_k3auk"), ExtResource("7_dhlec"), ExtResource("5_4gpxn")])
+blade_sounds_vertical = Array[AudioStream]([ExtResource("8_vlsmr"), ExtResource("9_4lnmq")])
+blade_sounds_diagonal = Array[AudioStream]([ExtResource("10_bjxs0"), ExtResource("13_pqb3a")])
 fruit_launch_sounds = Array[AudioStream]([ExtResource("12_22dlq"), ExtResource("13_4qwqf"), ExtResource("14_d12up"), ExtResource("15_fjb5m"), ExtResource("16_4jrlx"), ExtResource("17_fm5fj"), ExtResource("18_yepwt"), ExtResource("19_gbm63")])
 bomb_launch_sounds = Array[AudioStream]([ExtResource("20_2whr8")])
 

@@ -1,7 +1,6 @@
 extends Node2D
 
 enum GameState {START, PLAYING, PAUSED, GAME_OVER}
-var current_state: GameState = -1
 
 @onready var gameplay = $GamePlay
 @onready var start_menu = $UI/StartMenu
@@ -40,9 +39,6 @@ func _ready() -> void:
 	game_over_menu.exit_to_menu_pressed.connect(back_to_start_menu)
 	
 func set_state(state: GameState):
-	if current_state == state:
-		return
-	current_state = state
 	start_menu.visible = state == GameState.START
 	gameplay.visible  = state != GameState.START
 	hud.visible = state == GameState.PLAYING
@@ -65,8 +61,6 @@ func set_state(state: GameState):
 		
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
-		if current_state != GameState.PLAYING and not get_tree().paused:
-			return
 		if get_tree().paused:
 			resume_game()
 		elif gameplay.visible:

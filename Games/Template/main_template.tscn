@@ -1,0 +1,36 @@
+[gd_scene load_steps=10 format=3 uid="uid://cn251dn5ray70"]
+
+[ext_resource type="Script" uid="uid://s0y5v6b8q1i5" path="res://Games/Template/main_template.gd" id="1_b0t8i"]
+[ext_resource type="PackedScene" uid="uid://k1a74w55djot" path="res://Games/juicyjutsu/gameplay/GamePlay.tscn" id="2_ky7lo"]
+[ext_resource type="PackedScene" uid="uid://b6y6aamj134po" path="res://Games/juicyjutsu/ui/StartMenu.tscn" id="3_fdxlp"]
+[ext_resource type="PackedScene" uid="uid://wtsj0hgr7akr" path="res://Games/juicyjutsu/ui/PauseMenu.tscn" id="4_shrao"]
+[ext_resource type="PackedScene" uid="uid://bmpa6dfi30xtl" path="res://Games/juicyjutsu/ui/HUD.tscn" id="5_dyn1e"]
+[ext_resource type="PackedScene" uid="uid://dvx4dqy70uo2c" path="res://Games/juicyjutsu/ui/GameOverMenu.tscn" id="6_bvhu0"]
+[ext_resource type="PackedScene" uid="uid://b6w8s7557821y" path="res://Games/juicyjutsu/systems/AudioManager.tscn" id="7_y5pl4"]
+[ext_resource type="PackedScene" uid="uid://bywuqxwu8qqup" path="res://Games/juicyjutsu/systems/Highscore_Manager.tscn" id="8_0r3yx"]
+[ext_resource type="PackedScene" uid="uid://edm32w82j3y2" path="res://Games/juicyjutsu/systems/CameraShake.tscn" id="9_656ne"]
+
+[node name="GameRoot" type="Node2D"]
+script = ExtResource("1_b0t8i")
+
+[node name="GamePlay" parent="." instance=ExtResource("2_ky7lo")]
+visible = false
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="StartMenu" parent="UI" instance=ExtResource("3_fdxlp")]
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("4_shrao")]
+visible = false
+
+[node name="Hud" parent="UI" instance=ExtResource("5_dyn1e")]
+visible = false
+
+[node name="GameOverMenu" parent="UI" instance=ExtResource("6_bvhu0")]
+visible = false
+
+[node name="AudioManager" parent="." instance=ExtResource("7_y5pl4")]
+
+[node name="HighscoreManager" parent="." instance=ExtResource("8_0r3yx")]
+
+[node name="CameraShake" parent="." instance=ExtResource("9_656ne")]

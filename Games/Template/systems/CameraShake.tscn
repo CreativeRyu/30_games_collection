@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1ee1djacfux8"]
+
+[ext_resource type="Script" uid="uid://dx5xx3btoofgy" path="res://Games/Template/systems/camera_shake.gd" id="1_6eunp"]
+
+[node name="CameraShake" type="Node2D" groups=["camera_shake"]]
+script = ExtResource("1_6eunp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 180)

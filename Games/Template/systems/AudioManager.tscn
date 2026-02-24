@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0hy7sbbgd27t"]
+
+[ext_resource type="Script" uid="uid://ee4fwbhe0ce1" path="res://Games/Template/systems/audio_manager.gd" id="1_hfuwa"]
+
+[node name="AudioManager" type="Node" groups=["audio_manager"]]
+script = ExtResource("1_hfuwa")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
+
+[node name="SfxPool" type="Node" parent="."]

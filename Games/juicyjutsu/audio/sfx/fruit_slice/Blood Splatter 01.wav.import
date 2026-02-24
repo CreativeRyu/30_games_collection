@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cv4ena76pio1b"
-path="res://.godot/imported/Blood Splatter 01.wav-53c42f4c6cde25a2feeddf9707ce4400.sample"
+path="res://.godot/imported/Blood Splatter 01.wav-bad3f4db3a10c66f68218f08ab7a64a5.sample"
 
 [deps]
 
-source_file="res://Games/juicyjutsu/audio/sfx/Blood Splatter 01.wav"
-dest_files=["res://.godot/imported/Blood Splatter 01.wav-53c42f4c6cde25a2feeddf9707ce4400.sample"]
+source_file="res://Games/juicyjutsu/audio/sfx/fruit_slice/Blood Splatter 01.wav"
+dest_files=["res://.godot/imported/Blood Splatter 01.wav-bad3f4db3a10c66f68218f08ab7a64a5.sample"]
 
 [params]
 

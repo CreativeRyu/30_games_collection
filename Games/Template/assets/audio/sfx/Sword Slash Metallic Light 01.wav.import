@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d143x4ovo1lfw"
+path="res://.godot/imported/Sword Slash Metallic Light 01.wav-d51e5d120d72ae45294fda1e68932a73.sample"
+
+[deps]
+
+source_file="res://Games/Template/audio/sfx/Sword Slash Metallic Light 01.wav"
+dest_files=["res://.godot/imported/Sword Slash Metallic Light 01.wav-d51e5d120d72ae45294fda1e68932a73.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
