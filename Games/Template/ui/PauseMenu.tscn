@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cddet80t2t6tc"]
 
-[ext_resource type="Script" uid="uid://bdjdnu0wv7f2w" path="res://Games/juicyjutsu/ui/pause_menu.gd" id="1_a34tl"]
+[ext_resource type="Script" uid="uid://dvmvyd2384yk" path="res://Games/Template/ui/pause_menu.gd" id="1_a34tl"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -35,6 +35,12 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Resume"
 
+[node name="RestartButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Restart"
+
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
@@ -42,4 +48,5 @@ size_flags_horizontal = 4
 text = "Back to Menu"
 
 [connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
