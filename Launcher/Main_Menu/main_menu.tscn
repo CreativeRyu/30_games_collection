@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4ljvox8mydep"]
+[gd_scene load_steps=13 format=3 uid="uid://c4ljvox8mydep"]
 
 [ext_resource type="Script" uid="uid://bontmw3xvcq4a" path="res://Launcher/Main_Menu/main_menu.gd" id="1_ovrgc"]
 [ext_resource type="PackedScene" uid="uid://c1vwmfj5sqqng" path="res://Launcher/Launcher_UI/game_card.tscn" id="1_xqga4"]
 [ext_resource type="FontFile" uid="uid://dvs84u8k4y3tf" path="res://Assets/Fonts/upheavtt.ttf" id="2_imvie"]
 [ext_resource type="Texture2D" uid="uid://dwxq618ld8bta" path="res://Assets/Graphics/Creative Djinn Logo Dark.png" id="4_6bivr"]
 [ext_resource type="PackedScene" uid="uid://dfrg7ne8lr2vs" path="res://Games/juicyjutsu/juicy_jutsu.tscn" id="4_imvie"]
+[ext_resource type="PackedScene" uid="uid://cn251dn5ray70" path="res://Games/Template/main_template.tscn" id="5_5e37e"]
 [ext_resource type="Script" uid="uid://ckotfxwy5rprc" path="res://Launcher/Main_Menu/quit_button.gd" id="5_8r73w"]
 [ext_resource type="Texture2D" uid="uid://bo2ih8iqrti5j" path="res://Assets/Graphics/button_icons/power.png" id="5_ng0o5"]
 
@@ -129,6 +130,9 @@ game_scene = ExtResource("4_imvie")
 layout_mode = 2
 focus_neighbor_left = NodePath("../GameCard")
 focus_neighbor_right = NodePath("../GameCard3")
+game_name = "Template"
+game_number = "2"
+game_scene = ExtResource("5_5e37e")
 
 [node name="GameCard3" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
 layout_mode = 2

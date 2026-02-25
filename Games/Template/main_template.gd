@@ -5,34 +5,37 @@ extends GameRootBase
 @onready var score_system = $GamePlay/ScoreSystem
 @onready var camera_shake = $CameraShake
 
-@export var start_menu_BGM = AudioStream
-@export var gameplay_BGM = AudioStream
+@export var start_menu_BGM: AudioStream
+@export var gameplay_BGM: AudioStream
 
-func _ready():
-	request_exit_to_launcher.connect(back_to_main_menu)
 
 func _connect_ui():
-	# ---------- START MENU ----------
-	if start_menu:
-		start_menu.start_game_pressed.connect(start_game)
-		start_menu.back_to_main_menu_pressed.connect(back_to_launcher)
-		start_menu.pressed_action.connect(_on_ui_pressed)
-
-	# ---------- PAUSE MENU ----------
-	if pause_menu:
-		pause_menu.resume_pressed.connect(resume_game)
-		pause_menu.restart_pressed.connect(restart_game)
-		pause_menu.back_to_start_pressed.connect(back_to_start_menu)
-		pause_menu.pressed_action.connect(_on_ui_pressed)
-
-	# ---------- GAME OVER ----------
-	if game_over_menu:
-		game_over_menu.restart_pressed.connect(restart_game)
-		game_over_menu.back_to_start_pressed.connect(back_to_start_menu)
-		game_over_menu.pressed_action.connect(_on_ui_pressed)
+	var menus = get_tree().get_nodes_in_group("menus")
+	for menu in menus:
+		# ---------- GLOBAL BUTTON SOUND ----------
+		if menu.has_signal("pressed_action"):
+			menu.pressed_action.connect(_on_ui_pressed)
+		# ---------- START GAME ----------
+		if menu.has_signal("start_game_pressed"):
+			menu.start_game_pressed.connect(start_game)
+		# ---------- RESUME ----------
+		if menu.has_signal("resume_pressed"):
+			menu.resume_pressed.connect(resume_game)
+		# ---------- RESTART ----------
+		if menu.has_signal("restart_pressed"):
+			menu.restart_pressed.connect(restart_game)
+		# ---------- BACK TO START ----------
+		if menu.has_signal("back_to_start_pressed"):
+			menu.back_to_start_pressed.connect(back_to_start_menu)
+		# ---------- EXIT TO LAUNCHER ----------
+		if menu.has_signal("back_to_main_menu_pressed"):
+			menu.back_to_main_menu_pressed.connect(back_to_launcher)
+		
+		# Debug Check ob Menüs alle conncected sind
+		print("Connected Menu:", menu.name)
 
 	# ---------- HUD ----------
-	if hud:
+	if hud and score_system:
 		hud.bind_score_system(score_system)
 
 	# ---------- GAMEPLAY ----------

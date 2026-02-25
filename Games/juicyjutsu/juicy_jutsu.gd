@@ -13,8 +13,8 @@ var current_state: GameState = -1
 @onready var score_system = $GamePlay/ScoreSystem
 @onready var fruit_spawner = $GamePlay/FruitSpawner
 @onready var camera_shake = $CameraShake
-@export var start_menu_BGM = AudioStream
-@export var gameplay_BGM = AudioStream
+@export var start_menu_BGM: AudioStream
+@export var gameplay_BGM: AudioStream
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS

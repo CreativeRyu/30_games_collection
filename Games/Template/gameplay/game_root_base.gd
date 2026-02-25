@@ -5,14 +5,14 @@ signal state_changed(new_state)
 signal request_exit_to_launcher
 
 enum GameState {START, PLAYING, PAUSED, GAME_OVER}
-var current_state : GameState = GameState.START
+var current_state : GameState = -1
 
 @onready var gameplay = get_node_or_null("GamePlay")
 @onready var ui = get_node_or_null("UI")
 @onready var start_menu = get_node_or_null("UI/StartMenu")
 @onready var pause_menu = get_node_or_null("UI/PauseMenu")
 @onready var hud = get_node_or_null("UI/HUD")
-@onready var game_over_menu = get_node_or_null("UI/GameOverMenu")
+@onready var game_over_menu = get_node_or_null("UI/GameOverMenu/GameOverMenuRoot")
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
