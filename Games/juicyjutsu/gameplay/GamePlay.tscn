@@ -7,13 +7,13 @@
 
 [node name="GamePlay" type="Node2D"]
 
-[node name="FruitSpawner" parent="." instance=ExtResource("1_7tban")]
-
-[node name="ScoreSystem" parent="." instance=ExtResource("2_munti")]
-
 [node name="JuicyBg" type="Sprite2D" parent="."]
 position = Vector2(320.5, 191.5)
 scale = Vector2(0.417318, 0.399414)
 texture = ExtResource("3_vwmit")
 
 [node name="Blade" parent="." instance=ExtResource("4_p5kof")]
+
+[node name="ScoreSystem" parent="." instance=ExtResource("2_munti")]
+
+[node name="FruitSpawner" parent="." instance=ExtResource("1_7tban")]

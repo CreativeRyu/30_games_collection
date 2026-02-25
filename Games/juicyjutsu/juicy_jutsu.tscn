@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://coofxbaj6cbbn" path="res://Games/juicyjutsu/audio/music/gameplayBGM.mp3" id="3_3sl3u"]
 [ext_resource type="PackedScene" uid="uid://b6y6aamj134po" path="res://Games/juicyjutsu/ui/StartMenu.tscn" id="3_8majp"]
 [ext_resource type="PackedScene" uid="uid://wtsj0hgr7akr" path="res://Games/juicyjutsu/ui/PauseMenu.tscn" id="4_0vxlw"]
-[ext_resource type="PackedScene" uid="uid://b08kjjqo7wc47" path="res://Games/Template/gameplay/GamePlay.tscn" id="4_re680"]
+[ext_resource type="PackedScene" uid="uid://k1a74w55djot" path="res://Games/juicyjutsu/gameplay/GamePlay.tscn" id="4_re680"]
 [ext_resource type="PackedScene" uid="uid://bmpa6dfi30xtl" path="res://Games/juicyjutsu/ui/HUD.tscn" id="5_n3ixl"]
 [ext_resource type="PackedScene" uid="uid://dvx4dqy70uo2c" path="res://Games/juicyjutsu/ui/GameOverMenu.tscn" id="6_n3ixl"]
 [ext_resource type="PackedScene" uid="uid://b6w8s7557821y" path="res://Games/juicyjutsu/systems/AudioManager.tscn" id="7_vxxs0"]
@@ -27,7 +27,6 @@ gameplay_BGM = ExtResource("3_3sl3u")
 visible = false
 
 [node name="Hud" parent="UI" instance=ExtResource("5_n3ixl")]
-visible = false
 
 [node name="GameOverMenu" parent="UI" instance=ExtResource("6_n3ixl")]
 visible = false

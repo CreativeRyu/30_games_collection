@@ -8,7 +8,6 @@ extends GameRootBase
 @export var start_menu_BGM: AudioStream
 @export var gameplay_BGM: AudioStream
 
-
 func _connect_ui():
 	var menus = get_tree().get_nodes_in_group("menus")
 	for menu in menus:
@@ -32,7 +31,7 @@ func _connect_ui():
 			menu.back_to_main_menu_pressed.connect(back_to_launcher)
 		
 		# Debug Check ob Menüs alle conncected sind
-		print("Connected Menu:", menu.name)
+		#print("Connected Menu:", menu.name)
 
 	# ---------- HUD ----------
 	if hud and score_system:
@@ -103,6 +102,6 @@ func _on_ui_pressed():
 	if audio_manager:
 		audio_manager.play_sound("button")
 
-func back_to_main_menu():
+func back_to_launcher():
 	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file("res://Launcher/Main_Menu/main_menu.tscn")

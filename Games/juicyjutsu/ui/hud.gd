@@ -13,6 +13,8 @@ func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func bind_score_system(score_system):	
+	if score_system == null:
+		return
 	if score_system.has_signal("time_changed"):
 		if score_system.time_changed.is_connected(_on_time_changed):
 			score_system.time_changed.disconnect(_on_time_changed)

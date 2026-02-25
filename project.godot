@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Games_Collection"
-run/main_scene="uid://d3h0st7ck4sgm"
+config/name="Arcade Collection"
+run/main_scene="uid://b3b7ft5dha34g"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.0980392, 0.12549, 0.152941, 1)
+boot_splash/show_image=false
+config/icon="uid://blvnt1qyp7diq"
 
 [display]
 
@@ -120,3 +122,7 @@ pause={
 
 2d_physics/layer_1="Fruit"
 2d_physics/layer_2="Blade"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

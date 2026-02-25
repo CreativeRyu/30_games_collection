@@ -10,16 +10,18 @@ var current_state: GameState = -1
 @onready var audio_manager = $AudioManager
 @onready var game_over_menu = $UI/GameOverMenu
 @onready var highscore_manager = $HighscoreManager
-@onready var score_system = $GamePlay/ScoreSystem
 @onready var fruit_spawner = $GamePlay/FruitSpawner
+@onready var score_system: ScoreSystem = $GamePlay/ScoreSystem
 @onready var camera_shake = $CameraShake
 @export var start_menu_BGM: AudioStream
 @export var gameplay_BGM: AudioStream
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	_connect_ui()
 	set_state(GameState.START)
 	
+func _connect_ui():
 	# Start Menu Connects
 	start_menu.start_game_pressed.connect(start_game)
 	start_menu.back_to_main_menu_pressed.connect(back_to_main_menu)
@@ -29,7 +31,7 @@ func _ready() -> void:
 	pause_menu.resume_pressed.connect(resume_game)
 	pause_menu.pressed_action.connect(_on_ui_pressed)
 	pause_menu.exit_to_menu_pressed.connect(back_to_start_menu)
-	
+
 	hud.bind_score_system(score_system)
 	fruit_spawner.fruit_spawned.connect(_on_fruit_spawned)
 	fruit_spawner.burst_spawned.connect(_on_burst_spawned)
