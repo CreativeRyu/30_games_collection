@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bontmw3xvcq4a" path="res://Launcher/Main_Menu/main_menu.gd" id="1_ovrgc"]
 [ext_resource type="PackedScene" uid="uid://c1vwmfj5sqqng" path="res://Launcher/Launcher_UI/game_card.tscn" id="1_xqga4"]
-[ext_resource type="FontFile" uid="uid://dvs84u8k4y3tf" path="res://Assets/Fonts/upheavtt.ttf" id="2_imvie"]
+[ext_resource type="Texture2D" uid="uid://bveybuu5r0762" path="res://Assets/Graphics/Creative Djinns Arcade Collection Grün.png" id="2_5e37e"]
 [ext_resource type="Texture2D" uid="uid://dwxq618ld8bta" path="res://Assets/Graphics/Creative Djinn Logo Dark.png" id="4_6bivr"]
 [ext_resource type="PackedScene" uid="uid://dfrg7ne8lr2vs" path="res://Games/juicyjutsu/juicy_jutsu.tscn" id="4_imvie"]
 [ext_resource type="PackedScene" uid="uid://cn251dn5ray70" path="res://Games/Template/main_template.tscn" id="5_5e37e"]
@@ -61,23 +61,16 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_ovrgc")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 2
-offset_left = 166.0
-offset_top = 11.0
-offset_right = 467.0
-offset_bottom = 79.0
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.991164, 0.991164, 0.991164, 1)
-theme_override_colors/font_outline_color = Color(0.0203997, 0.666101, 0.529135, 1)
-theme_override_constants/line_spacing = 10
-theme_override_constants/paragraph_spacing = 0
-theme_override_constants/outline_size = 7
-theme_override_fonts/font = ExtResource("2_imvie")
-theme_override_font_sizes/font_size = 32
-text = "Creative Djinn's
-Games Collection"
-horizontal_alignment = 1
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(350, 170)
+layout_mode = 1
+offset_left = 169.0
+offset_top = -15.0
+offset_right = 569.0
+offset_bottom = 155.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_5e37e")
+expand_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
@@ -202,7 +195,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="CreativeDjinnLogoDark" type="Sprite2D" parent="."]
-z_index = -10
+z_index = 10
 position = Vector2(44, 39)
 scale = Vector2(0.0521582, 0.0485013)
 texture = ExtResource("4_6bivr")
