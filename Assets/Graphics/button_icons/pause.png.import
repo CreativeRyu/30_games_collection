@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bveybuu5r0762"
-path="res://.godot/imported/Creative Djinns Arcade Collection Grün.png-5cde222d9205bb195e5f909ea4ad71a0.ctex"
+uid="uid://b6selquec8ap0"
+path="res://.godot/imported/pause.png-b0d0bfda324ca528f6c3e2ad0a37edfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Creative Djinns Arcade Collection Grün.png"
-dest_files=["res://.godot/imported/Creative Djinns Arcade Collection Grün.png-5cde222d9205bb195e5f909ea4ad71a0.ctex"]
+source_file="res://Assets/Graphics/button_icons/pause.png"
+dest_files=["res://.godot/imported/pause.png-b0d0bfda324ca528f6c3e2ad0a37edfd.ctex"]
 
 [params]
 

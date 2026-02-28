@@ -1,9 +1,13 @@
 extends Control
 
+signal pause_pressed
+signal pressed_action
+
 @onready var time_label = $Time_Label
 @onready var score_label = $Score_Label
 @onready var score_animation_player = $ScoreAnimationPlayer
 @onready var timer_animation_player = $TimerAnimationPlayer
+@onready var pause_button = $PauseButton
 
 @export var score_prefix := ""
 @export var time_prefix := ""
@@ -40,3 +44,7 @@ func _on_score_changed(score: int):
 	if score > 0:
 		if score_animation_player.current_animation != "score_pulse" and score_animation_player.has_animation("score_pulse"):
 			score_animation_player.play("score_pulse")
+
+func _on_pause_button_pressed() -> void:
+	pause_pressed.emit()
+	pressed_action.emit()

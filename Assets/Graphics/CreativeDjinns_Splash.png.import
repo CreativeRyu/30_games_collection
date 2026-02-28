@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blvnt1qyp7diq"
-path="res://.godot/imported/Creative Djinn Logo Alpha.png-49528db4a3c8d9003ad93ed9e01350d1.ctex"
+uid="uid://5wd1fro1ewiq"
+path="res://.godot/imported/CreativeDjinns_Splash.png-3d539cad77d00b4a52512274988c7d80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Creative Djinn Logo Alpha.png"
-dest_files=["res://.godot/imported/Creative Djinn Logo Alpha.png-49528db4a3c8d9003ad93ed9e01350d1.ctex"]
+source_file="res://Assets/Graphics/CreativeDjinns_Splash.png"
+dest_files=["res://.godot/imported/CreativeDjinns_Splash.png-3d539cad77d00b4a52512274988c7d80.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhfpsfmpdokgh"
-path="res://.godot/imported/Creative Djinns Arcade Collection Alpha.png-6bdf6066894fe78baef5ef29639e81c5.ctex"
+uid="uid://dif1uaky21o5b"
+path="res://.godot/imported/LogoundSchrift.png-ad84b353abe2f896a91889c1146aa5fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Creative Djinns Arcade Collection Alpha.png"
-dest_files=["res://.godot/imported/Creative Djinns Arcade Collection Alpha.png-6bdf6066894fe78baef5ef29639e81c5.ctex"]
+source_file="res://Assets/Graphics/LogoundSchrift.png"
+dest_files=["res://.godot/imported/LogoundSchrift.png-ad84b353abe2f896a91889c1146aa5fb.ctex"]
 
 [params]
 

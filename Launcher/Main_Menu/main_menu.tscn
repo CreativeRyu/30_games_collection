@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://c4ljvox8mydep"]
+[gd_scene load_steps=12 format=3 uid="uid://c4ljvox8mydep"]
 
 [ext_resource type="Script" uid="uid://bontmw3xvcq4a" path="res://Launcher/Main_Menu/main_menu.gd" id="1_ovrgc"]
 [ext_resource type="PackedScene" uid="uid://c1vwmfj5sqqng" path="res://Launcher/Launcher_UI/game_card.tscn" id="1_xqga4"]
-[ext_resource type="Texture2D" uid="uid://bveybuu5r0762" path="res://Assets/Graphics/Creative Djinns Arcade Collection Grün.png" id="2_5e37e"]
-[ext_resource type="Texture2D" uid="uid://dwxq618ld8bta" path="res://Assets/Graphics/Creative Djinn Logo Dark.png" id="4_6bivr"]
+[ext_resource type="Texture2D" uid="uid://br5vobx83vbki" path="res://Assets/Graphics/Kreative Djinns Arcade Kollektion.png" id="2_5e37e"]
 [ext_resource type="PackedScene" uid="uid://dfrg7ne8lr2vs" path="res://Games/juicyjutsu/juicy_jutsu.tscn" id="4_imvie"]
 [ext_resource type="PackedScene" uid="uid://cn251dn5ray70" path="res://Games/Template/main_template.tscn" id="5_5e37e"]
 [ext_resource type="Script" uid="uid://ckotfxwy5rprc" path="res://Launcher/Main_Menu/quit_button.gd" id="5_8r73w"]
@@ -61,13 +60,13 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_ovrgc")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BannerTextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(350, 170)
 layout_mode = 1
-offset_left = 169.0
-offset_top = -15.0
-offset_right = 569.0
-offset_bottom = 155.0
+offset_left = 168.0
+offset_top = -10.0
+offset_right = 568.0
+offset_bottom = 160.0
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_5e37e")
 expand_mode = 2
@@ -193,11 +192,5 @@ grow_vertical = 2
 texture = ExtResource("5_ng0o5")
 expand_mode = 1
 stretch_mode = 4
-
-[node name="CreativeDjinnLogoDark" type="Sprite2D" parent="."]
-z_index = 10
-position = Vector2(44, 39)
-scale = Vector2(0.0521582, 0.0485013)
-texture = ExtResource("4_6bivr")
 
 [connection signal="pressed" from="CenterContainer/MarginContainer/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

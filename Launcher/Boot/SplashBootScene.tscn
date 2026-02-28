@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cajr2stqa2blh" path="res://Launcher/Boot/splash_boot_scene.gd" id="1_4o7va"]
 [ext_resource type="PackedScene" uid="uid://d3h0st7ck4sgm" path="res://Launcher/Main/main.tscn" id="2_u31ff"]
-[ext_resource type="Texture2D" uid="uid://bcsdgpkqoa8cw" path="res://Assets/Graphics/CreativeDjinnSplash.png" id="3_u31ff"]
+[ext_resource type="Texture2D" uid="uid://5wd1fro1ewiq" path="res://Assets/Graphics/CreativeDjinns_Splash.png" id="3_u31ff"]
 
 [node name="SplashBootScene" type="Control" node_paths=PackedStringArray("splash_screen")]
 layout_mode = 3
@@ -33,11 +33,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer"]
-custom_minimum_size = Vector2(170, 170)
+custom_minimum_size = Vector2(350, 170)
 layout_mode = 2
 texture = ExtResource("3_u31ff")
-expand_mode = 1
-stretch_mode = 4
+expand_mode = 4
+stretch_mode = 5
 
 [node name="LauncherHolder" type="Control" parent="."]
 layout_mode = 1

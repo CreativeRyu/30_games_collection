@@ -33,6 +33,8 @@ func _connect_ui():
 	pause_menu.exit_to_menu_pressed.connect(back_to_start_menu)
 
 	hud.bind_score_system(score_system)
+	hud.pause_pressed.connect(pause_game)
+	hud.pressed_action.connect(_on_ui_pressed)
 	fruit_spawner.fruit_spawned.connect(_on_fruit_spawned)
 	fruit_spawner.burst_spawned.connect(_on_burst_spawned)
 	score_system.time_over.connect(trigger_game_over)
