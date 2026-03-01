@@ -1,0 +1,128 @@
+[gd_scene load_steps=14 format=3 uid="uid://poaf8k3f50e8"]
+
+[ext_resource type="Script" uid="uid://2ibulicig81q" path="res://Games/BotShot/ui/start_menu.gd" id="1_dypl0"]
+[ext_resource type="Texture2D" uid="uid://bekth168fi5il" path="res://Games/BotShot/assets/sprites/menu/BotShot_Title.png" id="2_t0dgn"]
+[ext_resource type="Texture2D" uid="uid://dcf7iq1b62p02" path="res://Games/BotShot/assets/sprites/menu/StartButton_Regular.png" id="3_ene1w"]
+[ext_resource type="Texture2D" uid="uid://c0t8sk1g2ro1f" path="res://Games/BotShot/assets/sprites/menu/TitleScreen_BG.png" id="3_fsbm5"]
+[ext_resource type="Script" uid="uid://dnreonnc473a7" path="res://Games/BotShot/ui/play_button.gd" id="3_myao2"]
+[ext_resource type="Texture2D" uid="uid://dww482sin81sb" path="res://Games/BotShot/assets/sprites/menu/Futuristischer Mech-Krieger im Kampf.png" id="4_1x538"]
+[ext_resource type="Texture2D" uid="uid://cdaly2d2djoem" path="res://Games/BotShot/assets/sprites/menu/StartButton_pressed.png" id="4_q5k6j"]
+[ext_resource type="Texture2D" uid="uid://cmcbf7gbxxy7x" path="res://Games/BotShot/assets/sprites/menu/StartButton_Hover.png" id="5_klxf5"]
+[ext_resource type="Texture2D" uid="uid://c5fc3ng7uk2n3" path="res://Games/BotShot/assets/sprites/menu/Button_Glow.png" id="7_q5k6j"]
+[ext_resource type="Texture2D" uid="uid://ccwwekm6vav10" path="res://Games/BotShot/assets/sprites/menu/MainButton_Regular.png" id="8_apub3"]
+[ext_resource type="Texture2D" uid="uid://cysn1xrmutbt7" path="res://Games/BotShot/assets/sprites/menu/MainButton_pressed.png" id="9_s5xgm"]
+[ext_resource type="Texture2D" uid="uid://cwypoi5ioi4my" path="res://Games/BotShot/assets/sprites/menu/MainButton_Hover.png" id="10_1drk3"]
+[ext_resource type="Script" uid="uid://dnst4ifa77wcp" path="res://Games/BotShot/ui/back_button.gd" id="11_tcnic"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dypl0")
+default_focus_path = NodePath("CenterContainer/MarginContainer/VBoxContainer/PlayButton")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+texture = ExtResource("2_t0dgn")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="PlayButton" type="TextureButton" parent="CenterContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("3_ene1w")
+texture_pressed = ExtResource("4_q5k6j")
+texture_hover = ExtResource("5_klxf5")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_myao2")
+
+[node name="FocusFrame" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/PlayButton"]
+visible = false
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_q5k6j")
+expand_mode = 2
+
+[node name="OptionsButton" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(110, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 14
+text = "Options"
+
+[node name="BackButton" type="TextureButton" parent="CenterContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("8_apub3")
+texture_pressed = ExtResource("9_s5xgm")
+texture_hover = ExtResource("10_1drk3")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("11_tcnic")
+
+[node name="FocusFrame" type="TextureRect" parent="CenterContainer/MarginContainer/VBoxContainer/BackButton"]
+visible = false
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_q5k6j")
+expand_mode = 2
+
+[node name="BotShotBG" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(320, 176)
+scale = Vector2(0.416667, 0.393555)
+texture = ExtResource("3_fsbm5")
+
+[node name="BotShot_ArtWork" type="Sprite2D" parent="."]
+position = Vector2(110, 243)
+scale = Vector2(0.18, 0.185)
+texture = ExtResource("4_1x538")
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

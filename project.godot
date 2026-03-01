@@ -28,6 +28,7 @@ window/stretch/mode="canvas_items"
 folder_colors={
 "res://Assets/Graphics/": "teal",
 "res://Games/": "green",
+"res://Games/juicyjutsu/": "gray",
 "res://Games/juicyjutsu/assets/": "teal",
 "res://Games/juicyjutsu/audio/": "blue",
 "res://Games/juicyjutsu/gameplay/": "green",

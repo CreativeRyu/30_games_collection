@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c1vwmfj5sqqng" path="res://Launcher/Launcher_UI/game_card.tscn" id="1_xqga4"]
 [ext_resource type="Texture2D" uid="uid://br5vobx83vbki" path="res://Assets/Graphics/Kreative Djinns Arcade Kollektion.png" id="2_5e37e"]
 [ext_resource type="PackedScene" uid="uid://dfrg7ne8lr2vs" path="res://Games/juicyjutsu/juicy_jutsu.tscn" id="4_imvie"]
-[ext_resource type="PackedScene" uid="uid://cn251dn5ray70" path="res://Games/Template/main_template.tscn" id="5_5e37e"]
+[ext_resource type="PackedScene" uid="uid://cn251dn5ray70" path="res://Games/BotShot/gameroot/main.tscn" id="5_5e37e"]
 [ext_resource type="Script" uid="uid://ckotfxwy5rprc" path="res://Launcher/Main_Menu/quit_button.gd" id="5_8r73w"]
 [ext_resource type="Texture2D" uid="uid://bo2ih8iqrti5j" path="res://Assets/Graphics/button_icons/power.png" id="5_ng0o5"]
 
@@ -111,23 +111,29 @@ theme_override_constants/separation = 20
 alignment = 1
 
 [node name="GameCard" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
+custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
 focus_neighbor_right = NodePath("../GameCard2")
 game_name = "Juicy Jutsu"
 game_number = "1"
 game_scene = ExtResource("4_imvie")
 
 [node name="GameCard2" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
+custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 focus_neighbor_left = NodePath("../GameCard")
 focus_neighbor_right = NodePath("../GameCard3")
-game_name = "Template"
+game_name = "Bot Shot"
 game_number = "2"
 game_scene = ExtResource("5_5e37e")
 
 [node name="GameCard3" parent="ScrollContainer/MarginContainer/HBoxContainer" instance=ExtResource("1_xqga4")]
+custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 focus_neighbor_left = NodePath("../GameCard2")
 focus_neighbor_right = NodePath("../GameCard4")
 

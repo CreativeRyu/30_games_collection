@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0hy7sbbgd27t"]
+
+[ext_resource type="Script" uid="uid://ee4fwbhe0ce1" path="res://Games/BotShot/systems/audio_manager.gd" id="1_hfuwa"]
+[ext_resource type="AudioStream" uid="uid://ci1dtqmr2ylb1" path="res://Games/BotShot/assets/audio/sfx/button_pressed.mp3" id="2_gk6ij"]
+
+[node name="AudioManager" type="Node" groups=["audio_manager"]]
+script = ExtResource("1_hfuwa")
+sfx_library = {
+"button_click": ExtResource("2_gk6ij")
+}
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
+
+[node name="SfxPool" type="Node" parent="."]

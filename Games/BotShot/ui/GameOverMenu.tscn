@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://vsp67ur58n2v"]
+
+[ext_resource type="Script" uid="uid://b2fbkvnqgl4nv" path="res://Games/BotShot/ui/game_over_menu.gd" id="1_uknhb"]
+[ext_resource type="Texture2D" uid="uid://ckqcrfbj4xem7" path="res://Games/BotShot/assets/sprites/menu/GameOverLabel.png" id="2_gdp8g"]
+[ext_resource type="FontFile" uid="uid://cgriejvcbmcee" path="res://Assets/Fonts/elv-pixels-06.ttf" id="3_7ccxj"]
+
+[node name="GameOverRoot" type="CanvasLayer"]
+
+[node name="GameOverMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uknhb")
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOverMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GameOverMenu/CenterContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="GameOverMenu/CenterContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverMenu/CenterContainer/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -143.0
+offset_right = 100.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GameOverMenu/CenterContainer/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+texture = ExtResource("2_gdp8g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Score_Label" type="Label" parent="GameOverMenu/CenterContainer/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_7ccxj")
+text = "Score:"
+
+[node name="Highscore_Label" type="Label" parent="GameOverMenu/CenterContainer/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_7ccxj")
+text = "Highscore:"
+
+[node name="Restart_Button" type="Button" parent="GameOverMenu/CenterContainer/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Restart Game"
+
+[node name="Start_Menu_Button" type="Button" parent="GameOverMenu/CenterContainer/MarginContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Start Menu"
+
+[connection signal="pressed" from="GameOverMenu/CenterContainer/MarginContainer/Panel/VBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="GameOverMenu/CenterContainer/MarginContainer/Panel/VBoxContainer/Start_Menu_Button" to="." method="_on_start_menu_button_pressed"]

@@ -37,7 +37,8 @@ Thumbs.db
 # ----------------------------
 # Audio Assets 
 # ----------------------------
-scenes/games/juicyjutsu/audio/
+Games/juicyjutsu/audio/
+Games/BotShot/assets/audio/
 
 # ----------------------------
 # Fonts
