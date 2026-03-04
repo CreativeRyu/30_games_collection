@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccwwekm6vav10"
-path="res://.godot/imported/MainButton_Regular.png-a1e47d0e41a93e4b53a8fa6d55f3ae8a.ctex"
+uid="uid://b8i0oucnhf3is"
+path="res://.godot/imported/Terminal.png-fa5679338c37278436bc2dfcfa916c8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Games/BotShot/assets/sprites/menu/MainButton_Regular.png"
-dest_files=["res://.godot/imported/MainButton_Regular.png-a1e47d0e41a93e4b53a8fa6d55f3ae8a.ctex"]
+source_file="res://Games/BotShot/assets/sprites/environment/objects/Terminal.png"
+dest_files=["res://.godot/imported/Terminal.png-fa5679338c37278436bc2dfcfa916c8b.ctex"]
 
 [params]
 

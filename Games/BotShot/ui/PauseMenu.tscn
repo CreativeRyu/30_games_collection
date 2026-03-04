@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cddet80t2t6tc"]
+[gd_scene load_steps=8 format=3 uid="uid://cddet80t2t6tc"]
 
 [ext_resource type="Script" uid="uid://dvmvyd2384yk" path="res://Games/BotShot/ui/pause_menu.gd" id="1_a34tl"]
 [ext_resource type="Texture2D" uid="uid://bpdjl0qoj8dbo" path="res://Games/BotShot/assets/sprites/menu/PAUSELabel.png" id="2_2osil"]
+[ext_resource type="Theme" uid="uid://mtvter7j306j" path="res://Games/BotShot/ui/ButtonTheme.tres" id="3_xkswr"]
+[ext_resource type="FontFile" uid="uid://dlu2amlu5gipt" path="res://Assets/Fonts/Kemco Pixel Bold.ttf" id="4_vmyx0"]
+[ext_resource type="Script" uid="uid://birp0fyyo3mnu" path="res://Games/BotShot/ui/resume_button.gd" id="5_b2bwk"]
+[ext_resource type="Script" uid="uid://cf5ekjskerne7" path="res://Games/BotShot/ui/restart_button.gd" id="6_7y0c0"]
+[ext_resource type="Script" uid="uid://dnst4ifa77wcp" path="res://Games/BotShot/ui/back_button.gd" id="7_djpke"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -11,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a34tl")
+default_focus_path = NodePath("VBoxContainer/ResumeButton")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -41,22 +47,35 @@ theme_override_font_sizes/font_size = 30
 text = "PAUSE"
 
 [node name="ResumeButton" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("3_xkswr")
+theme_override_fonts/font = ExtResource("4_vmyx0")
+theme_override_font_sizes/font_size = 12
 text = "Resume"
+script = ExtResource("5_b2bwk")
 
 [node name="RestartButton" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_xkswr")
+theme_override_fonts/font = ExtResource("4_vmyx0")
+theme_override_font_sizes/font_size = 12
 text = "Restart"
+script = ExtResource("6_7y0c0")
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Back to Menu"
+theme = ExtResource("3_xkswr")
+theme_override_fonts/font = ExtResource("4_vmyx0")
+theme_override_font_sizes/font_size = 12
+text = "Main"
+script = ExtResource("7_djpke")
 
 [connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]

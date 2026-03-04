@@ -4,10 +4,10 @@ extends Control
 signal pressed_action
 signal hover_action
 
-@export var default_focus_path : NodePath
-
 var is_button_locked = false
 var ignore_first_focus = true
+
+@export var default_focus_path : NodePath
 
 func _enter_tree():
 	add_to_group("menus")

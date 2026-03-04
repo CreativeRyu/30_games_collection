@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdaly2d2djoem"
-path="res://.godot/imported/StartButton_pressed.png-0a296658ced3e97c34d5d7e8fef74bce.ctex"
+uid="uid://dpub2uksqq18u"
+path="res://.godot/imported/Button_Hover.png-6ca2c4f8bba23dcadfb790a4d47cb152.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Games/BotShot/assets/sprites/menu/StartButton_pressed.png"
-dest_files=["res://.godot/imported/StartButton_pressed.png-0a296658ced3e97c34d5d7e8fef74bce.ctex"]
+source_file="res://Games/BotShot/assets/sprites/menu/Button_Hover.png"
+dest_files=["res://.godot/imported/Button_Hover.png-6ca2c4f8bba23dcadfb790a4d47cb152.ctex"]
 
 [params]
 

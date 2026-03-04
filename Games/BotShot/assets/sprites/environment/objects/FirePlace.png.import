@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwypoi5ioi4my"
-path="res://.godot/imported/MainButton_Hover.png-becd0126c1707b2d3bd1ecf8fbe98849.ctex"
+uid="uid://c3loj8v5t2nvf"
+path="res://.godot/imported/FirePlace.png-19d05e57672263e040b86a013309e6ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Games/BotShot/assets/sprites/menu/MainButton_Hover.png"
-dest_files=["res://.godot/imported/MainButton_Hover.png-becd0126c1707b2d3bd1ecf8fbe98849.ctex"]
+source_file="res://Games/BotShot/assets/sprites/environment/objects/FirePlace.png"
+dest_files=["res://.godot/imported/FirePlace.png-19d05e57672263e040b86a013309e6ca.ctex"]
 
 [params]
 

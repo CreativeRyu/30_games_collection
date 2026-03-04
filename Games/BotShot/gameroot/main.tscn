@@ -23,8 +23,10 @@ start_menu_BGM = ExtResource("2_mtdqd")
 [node name="StartMenu" parent="UI" instance=ExtResource("3_b0t8i")]
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("6_b0t8i")]
+visible = false
 
 [node name="GameOverMenu" parent="UI" instance=ExtResource("6_ky7lo")]
+visible = false
 
 [node name="HighscoreManager" parent="." instance=ExtResource("8_0r3yx")]
 script = null

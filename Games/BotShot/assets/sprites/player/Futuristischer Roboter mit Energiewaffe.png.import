@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmcbf7gbxxy7x"
-path="res://.godot/imported/StartButton_Hover.png-f08cab339f1ab84b103eacd20868cc36.ctex"
+uid="uid://dpl1dd1gaxmm4"
+path="res://.godot/imported/Futuristischer Roboter mit Energiewaffe.png-b162dabea69810356aeb4fa1f778dcec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Games/BotShot/assets/sprites/menu/StartButton_Hover.png"
-dest_files=["res://.godot/imported/StartButton_Hover.png-f08cab339f1ab84b103eacd20868cc36.ctex"]
+source_file="res://Games/BotShot/assets/sprites/player/Futuristischer Roboter mit Energiewaffe.png"
+dest_files=["res://.godot/imported/Futuristischer Roboter mit Energiewaffe.png-b162dabea69810356aeb4fa1f778dcec.ctex"]
 
 [params]
 

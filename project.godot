@@ -17,6 +17,10 @@ boot_splash/bg_color=Color(0.0980392, 0.12549, 0.152941, 1)
 boot_splash/show_image=false
 config/icon="uid://w1pqiq30ghfc"
 
+[autoload]
+
+InputHandler="*res://Shared/systems/InputHandler.tscn"
+
 [display]
 
 window/size/viewport_width=640
@@ -35,7 +39,8 @@ folder_colors={
 "res://Games/juicyjutsu/systems/": "yellow",
 "res://Games/juicyjutsu/ui/": "orange",
 "res://Launcher/": "teal",
-"res://Launcher/Launcher_UI/": "teal"
+"res://Launcher/Launcher_UI/": "teal",
+"res://Shared/": "pink"
 }
 
 [global_group]
